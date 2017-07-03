@@ -13,7 +13,8 @@ function particle() {
 	this.vely = random(-1,1);
 	this.lifetime = random(0,maxpart);
 
-	this.refresh = function() {
+	this.refresh = function()
+	{
 		this.posx += this.velx;
 		this.posy += this.vely;
 		this.lifetime--;
@@ -21,10 +22,13 @@ function particle() {
 			this.velx *= -1;
 		if(this.posy > hei || this.posy < 0)
 			this.vely *= -1;
-		}
-	this.show = function() {
+	}
+	this.show = function()
+	{
 		if(this.lifetime > 0)
-		ellipse(this.posx, this.posy, this.size, this.size);
+		{
+			ellipse(this.posx, this.posy, this.size, this.size);
+		}
 	}
 }
 
